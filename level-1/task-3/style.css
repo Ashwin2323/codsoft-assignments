@@ -1,0 +1,99 @@
+@font-face {
+    font-family: lcd;
+    src: url(/assets/fonts/lcd.ttf);
+}
+
+*{
+    font-family: Calibri, 'lcd', 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#parent{
+    position: absolute;
+    background-color: rgb(66, 50, 156);
+    background-color:  hsl(193, 32%, 46%);
+    height: 600px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#screen *{
+    font-family: lcd;
+}
+
+#screen{
+    border-radius: 15px;
+    height: 120px;
+    width: 450px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: rgb(36, 36, 39);
+    padding: 0px 10px;
+}
+
+#screen-text{
+    color: white;
+    font-size: 100px;
+    /* max-width: 100%; */
+    overflow: hidden;
+}
+
+#keypad{
+    margin-top: 30px;
+    display: grid;
+    border-radius: 15px;
+    grid-template-columns: 9fr 9fr 9fr 10fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* background-color: red; */
+    grid-gap: 25px;
+    height: 400px;
+    padding: 20px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #000;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: x-large;
+    /* transition: background-color 0.3s ease, transform 0.1s ease; */
+    cursor: pointer;
+    user-select: none;
+}
+
+.btns:hover,
+.btns:active {
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    background-color: #222;
+    transform: scale(1.03);
+}
+
+.btns:active {
+    background-color: #444;
+    transform: scale(0.96);
+}
+
+
+#btn-reset{
+    grid-column-start: span 2;
+}
+
+#btn-equal{
+    grid-column-start: span 2;
+}
